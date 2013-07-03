@@ -70,6 +70,12 @@ Fire the server up::
 
 OpenERP should now be running on http://localhost:8069.
 
+Example Code
+============
+
+I've followed the example https://doc.openerp.com/trunk/web/module, the
+code is in `src/web_example`.
+
 Links
 =====
 
