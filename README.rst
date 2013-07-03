@@ -68,4 +68,7 @@ Fire the server up::
     $ bin/start_openerp
 
 
+OpenERP should now be running on http://localhost:8069.
+
+
 .. vim: set ft=rst tw=75 nocin nosi ai sw=4 ts=4 expandtab:
