@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_sidebar_example_config_tree">
+            <field name="name">sidebar_example.config.tree</field>
+            <field name="model">sidebar_example.config</field>
+            <field name="arch" type="xml">
+                <tree string="Sidebar Example Configuration">
+                    <field name="some_value"/>
+                    <field name="another_value"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_sidebar_example_config_form">
+            <field name="name">sidebar_example.config.form</field>
+            <field name="model">sidebar_example.config</field>
+            <field name="arch" type="xml">
+                <form string="Sidebar Example Configuration" version="7.0">
+                <group>
+                    <field name="some_value"/>
+                    <field name="another_value"/>
+                </group>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='action_sidebar_example_users_config'>
+            <field name='name'>Models configuration</field>
+            <field name='res_model'>sidebar_example.config</field>
+            <field name='type'>ir.actions.act_window</field>
+            <field name='view_type'>form</field>
+            <field name='view_id' ref='view_sidebar_example_config_tree'/>
+        </record>
+
+        <menuitem name='Sidebar Example configuration' id='menu_sidebar_example_config' parent='base.menu_administration'/>
+        <menuitem name='Foo Configuration' id='menu_sidebar_example_foo_config' parent='menu_sidebar_example_config'
+            action='action_sidebar_example_users_config'/>
+
+    </data>
+</openerp>

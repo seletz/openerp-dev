@@ -73,6 +73,29 @@ OpenERP should now be running on http://localhost:8069.
 Example Code
 ============
 
+sidebar_example
+---------------
+
+This example is derived from the google docs attachment addon.  It shows:
+
+- how to create a new model:
+
+  A model `sidebar_example.config` is created in `__init__.py`
+
+- how to hook in a configuration setting:
+
+  A new configutation view is added for the above model.  A tree and form
+  view is configured.  The forms are hooked into the main settings menu.
+
+- how to hook in a new menu entry dynamically.  The menu entry `Add Foo Doc ...`
+  is added dynamically to the `Attachments` drop-down menu of **all**
+  models where a attachment is allowed.
+
+  This is done completely in the browser using javascript.
+
+web_example
+-----------
+
 I've followed the example https://doc.openerp.com/trunk/web/module, the
 code is in `src/web_example`.
 
